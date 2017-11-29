@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Blank Template</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+	<body>
+    <h1>Rock, Papaer, Scissors!</h1>
+    <button id ="rock" type="button" name="button">Rock</button>
+    <button id ="paper" type="button" name="button">Paper</button>
+    <button id ="scissor" type="button" name="button">Scissors</button>
+    <p class="response"> </p>
+
+
+
+	<script type="text/javascript">
+
+  document.getElementById('rock').onclick = rock;
+  document.getElementById('paper').onclick = paper;
+  document.getElementById('scissor').onclick = scissors;
+
+
+
+  function rock(){
+
+     let computerGuess = Math.random();
+
+    if (computerGuess > 0 && computerGuess < .33) {
+      document.getElementsByClassName('response')[0].innerHTML = "It's a tie! You both picked rock";
+    }else if (computerGuess >=.33 && computerGuess < .66) {
+      document.getElementsByClassName('response')[0].innerHTML = "You Won! The computer picked Scissors";
+    }else if (computerGuess >= .66 && computerGuess <=.99) {
+      document.getElementsByClassName('response')[0].innerHTML = "Sorry you Lost! The computer picked Paper";
+    }
+  };
+
+  function paper(){
+     let computerGuess = Math.random();
+
+    if (computerGuess > 0 && computerGuess < .33) {
+      document.getElementsByClassName('response')[0].innerHTML = "You Won! The computer picked rock";
+    }else if (computerGuess >=.33 && computerGuess < .66) {
+      document.getElementsByClassName('response')[0].innerHTML = "You lost bro! The computer picked Scissors";
+    }else if (computerGuess >= .66 && computerGuess <=.99) {
+      document.getElementsByClassName('response')[0].innerHTML = "Its a tie! You both picked Paper";
+    }
+  };
+
+  function scissors(){
+     let computerGuess = Math.random();
+
+    if (computerGuess > 0 && computerGuess < .33) {
+      document.getElementsByClassName('response')[0].innerHTML = "You lost Buddy! The computer picked rock";
+    }else if (computerGuess >=.33 && computerGuess < .66) {
+      document.getElementsByClassName('response')[0].innerHTML = "It's a tie! You both picked Scissors";
+    }else if (computerGuess >= .66 && computerGuess <=.99) {
+      document.getElementsByClassName('response')[0].innerHTML = "You won! The computer picked Paper";
+    }
+  };
+
+
+
+
+	</script>
+
+	</body>
+</html>
